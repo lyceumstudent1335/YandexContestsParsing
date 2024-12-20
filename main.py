@@ -77,7 +77,7 @@ if __name__ == "__main__":
     print(table)
     contest_id = input("Введите id соревнования: ")
     browser.get(f"https://admin.contest.yandex.ru/contests/{contest_id}/submissions")
-    # TODO
+    
     # Переключение страниц и подгрузка данных
     while next_page():
         WebDriverWait(browser, timeout).until(
