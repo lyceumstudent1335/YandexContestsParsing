@@ -92,6 +92,7 @@ if __name__ == "__main__":
             table.add_row(row)
             row[0] = int(row[0])
             row[1] = datetime.strptime(row[1], '%d.%m.%y %H:%M:%S')
+            row[5] = ''.join([s for s in row[5] if s.isalpha()])
             row[6] = int(row[6]) if row[6] else None
             row[7] = (int(row[7].split()[0]) if row[7].split()[1] == 'мс' else float(row[7].split()[0]) * 1000) if row[6] else 0
             row[8] = float(row[8].split()[0]) if row[6] else 0
